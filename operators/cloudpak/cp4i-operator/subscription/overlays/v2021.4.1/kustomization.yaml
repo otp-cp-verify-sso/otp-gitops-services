@@ -22,7 +22,7 @@ patches:
     patch: |-
       - op: replace
         path: /spec/channel
-        value: '4.2'
+        value: 'v4.2'
   - target:
       kind: Subscription
       name: ibm-mq
