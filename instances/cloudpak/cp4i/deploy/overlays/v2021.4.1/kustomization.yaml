@@ -16,7 +16,7 @@ patches:
         value: 'L-RJON-C7QG3S'
       - op: replace
         path: /spec/license/accept
-        value: 'true'
+        value: true
       - op: replace
         path: /spec/storage/class
         value: 'ibmc-file-gold-gid'
