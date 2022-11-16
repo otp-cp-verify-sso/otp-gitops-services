@@ -20,7 +20,7 @@ oc create secret generic secrets-manager -n cp4i \
    --dry-run=client -o yaml > delete-api-key-secret.yaml
 
 # Encrypt the secret using kubeseal and private key from the cluster
-kubeseal -n kube-system --controller-name=${SEALED_SECRET_CONTOLLER_NAME} --controller-namespace=${SEALED_SECRET_NAMESPACE} -o yaml < delete-api-key-secret.yaml > api-key-secret.yaml
+kubeseal -n kube-system --controller-name=${SEALED_SECRET_CONTOLLER_NAME} --controller-namespace=${SEALED_SECRET_NAMESPACE} -o yaml < delete-api-key-secret.yaml > sealed-secret.yaml
 
 # NOTE, do not push delete-api-key-secret.yaml into git!
 rm delete-api-key-secret.yaml
