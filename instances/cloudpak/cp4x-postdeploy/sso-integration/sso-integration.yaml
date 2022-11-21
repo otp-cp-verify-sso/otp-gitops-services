@@ -10,7 +10,7 @@ spec:
       containers:
       - name: configure-cp4x-verify
         image: quay.io/langley_millard_ibm/cp4x-verify
-        command: ["/scratch/cp4x-verify.sh"]
+        command: ["./cp4x-verify.sh"]
         volumeMounts:
         - mountPath: /scratch
           name: scratch
